@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "Medcare",
+    "slug": "medcare-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFFFFF"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Medcare utilise la caméra pour vos consultations vidéo.",
+          "microphonePermission": "Medcare utilise le micro pour vos consultations vidéo.",
+          "recordAudioAndroid": true
+        }
+      ]
+    ],
+    "android": {
+      "package": "com.fahniente.medcare",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "permissions": [
+        "INTERNET",
+        "CAMERA",
+        "RECORD_AUDIO",
+        "MODIFY_AUDIO_SETTINGS"
+      ]
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fahniente.medcare",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Medcare utilise la caméra pour vos consultations vidéo.",
+        "NSMicrophoneUsageDescription": "Medcare utilise le micro pour vos consultations vidéo."
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/icon.png"
+    }
+  }
+}
